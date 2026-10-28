@@ -1,0 +1,43 @@
+:root {
+  --paper: #FFFDF8;
+  --navy: #17337E;
+  --amber: #F5A94A;
+  --teal: #4BB3BF;
+  --tealtint: #E6F4F6;
+  --ambertint: #FEF1DE;
+  --ink: #1d2a4d;
+  --mute: #5d6786;
+  --line: #e3e8ee;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  color: var(--ink);
+  font: 16px/1.5 Figtree, system-ui, sans-serif;
+  padding-bottom: env(safe-area-inset-bottom);
+  background:
+    var(--paper) linear-gradient(rgba(75,179,191,.12) 1px, transparent 1px) 0 0/36px 36px,
+    linear-gradient(90deg, rgba(75,179,191,.12) 1px, transparent 1px) 0 0/36px 36px;
+}
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+h1 { margin: 0; }
+.sr {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* round platform badge, used on both pages */
+.badge {
+  width: 54px; height: 54px; border-radius: 50%;
+  display: grid; place-items: center; color: #fff;
+  font: 700 17px Lexend, sans-serif;
+  box-shadow: 0 0 0 4px var(--paper), 0 0 0 6px var(--c, var(--teal));
+  transition: transform .15s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+
+.app-loading { text-align: center; color: var(--mute); padding: 80px 18px; margin: 0; }

@@ -1,0 +1,35 @@
+.admin { max-width: 760px; margin: 0 auto; padding: 18px; background: var(--paper); }
+.admin h1 { color: var(--navy); font: 700 28px Lexend, sans-serif; margin: 0 0 8px; }
+.admin h2 { margin: 0 0 6px; font: 700 18px Lexend, sans-serif; color: var(--navy); }
+
+.card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin: 12px 0; }
+.row { display: flex; gap: 8px; margin: 6px 0; flex-wrap: wrap; }
+.row > * { flex: 1 1 150px; }
+
+.admin input,
+.admin select,
+.admin textarea {
+  width: 100%; padding: 9px 10px; border: 1px solid var(--line); border-radius: 8px;
+  background: #fff; color: var(--ink); font: inherit;
+}
+.admin button {
+  font: 600 14px Figtree, sans-serif; padding: 9px 14px; border-radius: 10px;
+  border: 1px solid var(--line); background: #fff; color: var(--ink); cursor: pointer;
+}
+.admin button.pri { background: var(--navy); border-color: var(--navy); color: #fff; }
+.admin button.del { flex: 0 0 auto; color: #c0392b; }
+
+.bar {
+  position: sticky; bottom: 0; display: flex; gap: 8px; flex-wrap: wrap;
+  background: var(--paper); padding: 12px 0;
+}
+.note { color: var(--mute); font-size: 14px; }
+
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.topbar h1 { margin: 0; }
+.who { display: flex; align-items: center; gap: 10px; }
+.who .note { margin: 0; }
+.admin button:disabled { opacity: .6; cursor: default; }
+.status { align-self: center; font-size: 14px; font-weight: 600; }
+.status.ok { color: #1e7b4f; }
+.status.err { color: #c0392b; }
